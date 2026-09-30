@@ -1,0 +1,167 @@
+html {
+
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: lato;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+}
+
+.sitio-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo{
+    display: flex;
+    justify-content: left;
+}
+
+.categorias a {
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.Masthead {
+    height: 80vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: blanchedalmond;
+
+}
+
+.Masthead h1 {
+    font-weight: 700;
+    text-align: center;
+    max-width: 600px;
+    font-size: 2.5rem;
+    background-color: #d4c7fd;
+}
+
+.Position {
+    padding: 60px 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    background-color: #dbfbb1;
+}
+
+.columna-banner {
+    width: 300px; 
+    position: relative;
+}
+
+.columna-texto h2 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.columna-texto p {
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #6f4d4d;
+}
+
+
+.Flex {
+    min-height: 50vh;
+    padding: 60px 20px;
+    background-color: aqua;
+    /* REQUISITOS: Alineadas, centradas, separadas y saltan de línea (wrap) */
+    display: flex;
+    justify-content: space-around; /* Separadas entre sí equitativamente */
+    align-items: center;           /* Centradas verticalmente */
+    flex-wrap: wrap;               /* Si no caben, bajan automáticamente */
+    gap: 20px;                     /* Separación extra de seguridad */
+}
+
+.caja {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(44, 62, 80, 0.85);
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 800px) {
+    /* Modificamos la caja número 3 sgun enunciado */
+    .caja-3 {
+        background-color: #f1c40f; /* Amarillo */
+        color: #000000;            /* Texto Negro */
+        order: -1;                 /* El truco de Flexbox para mandarla al principio */
+    }
+    .caja-3 span {
+        color: #000000;
+    }
+}
+
+@media (max-width: 500px) {
+    .seccion-flex {
+        flex-direction: column;   /* Cambiamos la orientación a columna */
+        align-items: flex-end;    /* Alinea todos los hijos (las cajas) a la derecha */
+    }
+    
+    .caja {
+        width: 300px;             /* Todas miden ahora 300px de ancho */
+    }
+}
+
+.galeria-imagenes {
+  display: flex;
+  flex-direction: column; /* Alinea los elementos en vertical (columna) */
+  align-items: center;     /* Centra las imágenes horizontalmente */
+  gap: 20px;               /* Controla la separación de espacio entre cada imagen */
+  width: 100%;             /* Asegura que ocupe todo el ancho disponible */
+  padding: 20px 0;
+  background-color: #f4a7a7;
+}
+
+
+.footer-text {
+  background-color: #1a1a1a;
+  padding: 20px;
+  font-size: 14px;
+  text-align: center;
+  color: azure;
+}
+
+.corazon-latiendo {
+  display: inline-block;
+  color: #f4a7a7; /* Color inicial del corazón */
+  font-weight: bold;
+  
+  /* Nombre de la animación, duración (0.8s), infinita y ciclo continuo */
+  animation: latidoColor 0.8s infinite alternate ease-in-out;
+}
+
+/* 🧠 La magia de la animación: escala y cambio de color */
+@keyframes latidoColor {
+  0% {
+    transform: scale(1);
+    color: #ff7070; /* Rojo suave */
+  }
+  100% {
+    transform: scale(1.3); /* Crece un 30% */
+    color: #ff0000; /* Rojo vibrante / fuego */
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.6); /* Opcional: un ligero brillo */
+  }
+}
